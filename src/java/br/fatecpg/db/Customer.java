@@ -5,6 +5,12 @@
  */
 package br.fatecpg.db;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 /**
  *
  * @author a
@@ -14,6 +20,26 @@ public class Customer {
     private String name;
     private String email;
 
+    public static ArrayList<Customer> getList() throws Exception {
+        ArrayList<Customer> list = new ArrayList();
+        Class.forName("org.apache.derby.jdbc.ClientDriver");
+        String url = "jdbc:derby://localhost:1527/sample";
+        String user = "app";
+        String pass = "app";
+        
+        Connection con = DriverManager.getConnection(url, user, pass);
+        Statement stmt = con.createStatement();
+        String sql = "SELECT customer_id, name, email FROM CUSTOMER";
+        ResultSet rs = stmt.executeQuery(sql);
+        
+        while(rs.next()) {
+            Customer c = new Customer(rs.getInt("customer_id"), rs.getString("name"), rs.getString("email"));
+            list.add(c);
+        }
+        
+        return list;
+    }
+    
     public Customer() {
     }
 
