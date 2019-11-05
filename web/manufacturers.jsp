@@ -1,9 +1,9 @@
-<%@page import="br.fatecpg.db.Customer"%>
+<%@page import="br.fatecpg.db.Manufacturer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/jspf/header.jspf" %>
 <div class="card mt-5">
   <div class="card-body">
-    <h5 class="card-title">Clientes</h5>
+    <h5 class="card-title">Fabricantes</h5>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -29,7 +29,7 @@
         </thead>
         <tbody>
             <%try {
-                for(Customer c : Customer.getList()) {%>
+                for(Manufacturer c : Manufacturer.getList()) {%>
                     <tr>
                         <td>
                             <%=c.getId()%>
