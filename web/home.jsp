@@ -13,7 +13,7 @@
     <div class="description">
         <div class="title"><h1>Gerencie, controle e analise seu fluxo de produtos</h1></div>
         <p class="text">
-            SUAEMPRESA é a plataforma web que vai permitir você se conectar e gerenciar seus clientes e fornecedores de maneira simples e rápida. 
+            Apresentamos a plataforma web que vai permitir você se conectar e gerenciar seus clientes e fornecedores de maneira simples e rápida. 
             Fornecemos listas que fornecem uma ampla visão a respeito do fluxo de seus produtos
         </p>
         <div class="menu">
