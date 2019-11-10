@@ -1,3 +1,4 @@
+<%@page import="br.fatecpg.db.productOrder"%>
 <%@page import="br.fatecpg.db.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/jspf/header.jspf" %>
@@ -17,13 +18,7 @@
                     E-mail
                 </th>
                 <th class="text-center">
-                    Ver
-                </th>
-                <th class="text-center">
-                    Editar
-                </th>
-                <th class="text-center">
-                    Excluir
+                    Verificar Ordem de Compra
                 </th>
             </tr>
         </thead>
@@ -41,13 +36,9 @@
                             <%=c.getEmail()%>
                         </td>
                         <td class="text-center">
-                            <a href="#" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                        </td>
-                        <td class="text-center">
-                            <a href="#" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                        </td>
-                        <td class="text-center">
-                            <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="productOrder.jsp?i=<%=c.getId()%>" class="btn btn-primary">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </a>
                         </td>
                     </tr>
                 <%}

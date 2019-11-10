@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author a
+ * @author a helio
  */
 public class Customer {
     private int id;

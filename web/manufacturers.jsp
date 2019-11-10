@@ -14,17 +14,17 @@
                     Nome
                 </th>
                 <th>
+                    Cidade
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
                     E-mail
                 </th>
                 <th class="text-center">
-                    Ver
-                </th>
-                <th class="text-center">
-                    Editar
-                </th>
-                <th class="text-center">
-                    Excluir
-                </th>
+                    Verificar Produtos
+                 </th>   
             </tr>
         </thead>
         <tbody>
@@ -38,16 +38,16 @@
                             <%=c.getName()%>
                         </td>
                         <td>
+                            <%=c.getCidade()%>
+                        </td>
+                        <td>
+                            <%=c.getEstado()%>
+                        </td>
+                        <td>
                             <%=c.getEmail()%>
                         </td>
                         <td class="text-center">
                             <a href="#" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                        </td>
-                        <td class="text-center">
-                            <a href="#" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                        </td>
-                        <td class="text-center">
-                            <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 <%}

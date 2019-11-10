@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author a
+ * @author a helio
  */
 public class Manufacturer {
     private int id;
@@ -50,9 +50,6 @@ public class Manufacturer {
         }
         
         return list;
-    }
-    
-    public Manufacturer() {
     }
     //Passando os parâmetros String name, cidade, estado e email no Método Construtor da classe Manufacturer, 
     //e atribuindo os mesmos aos atributos da classe, conforme solicitado no enunciado do projeto_05.
