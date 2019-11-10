@@ -39,12 +39,16 @@ nav {
     padding-top: 60px;
 }
 
+.navbar-brand img {
+    width: 35px;
+}
 /* Estilos Index */
 
 .main {
     display: flex;
     justify-content: space-between;
     height: 80vh;
+    padding-top: 60px;
 }
 
 .description {
