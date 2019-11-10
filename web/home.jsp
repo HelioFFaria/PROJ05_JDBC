@@ -2,9 +2,9 @@
 <%@include file="/WEB-INF/jspf/header.jspf" %>
 
 <script>
-    
+
     function goToPage(url) {
-       window.location.href = url;
+        window.location.href = url;
     }
 </script>
 
@@ -17,11 +17,11 @@
             Fornecemos listas que fornecem uma ampla visão a respeito do fluxo de seus produtos
         </p>
         <div class="menu">
-            
+
             <div class="customer" onclick="goToPage('<%=request.getContextPath()%>/customers.jsp')">
                 CLIENTES
             </div>
-               
+
             <div class="manufacturer" onclick="goToPage('<%=request.getContextPath()%>/manufacturers.jsp')">
                 FABRICANTES
             </div>
@@ -34,7 +34,7 @@
 <div class="container-flex team">
     <div class="container">
         <div class="title">
-            <h1>CONHEÇA NOSSA </h1>
+            <h1>CONHEÇA A NOSSA </h1>
             <h1> EQUIPE</h1>
         </div>
         <div class="cards">

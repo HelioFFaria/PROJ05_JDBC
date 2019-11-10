@@ -151,3 +151,16 @@ nav {
 .card .content h4 {
     margin-top: 80px;
 }
+
+/* Tables */
+
+.card.mt-5 {
+    margin-bottom: 60px;
+    -webkit-box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.2);
+}
+
+.table th {
+    border-top: none;
+}

@@ -2,10 +2,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/jspf/header.jspf" %>
 <div class="container">
+
+    <h2 class="card-title">Fabricantes</h2>
+
     <div class="card mt-5">
         <div class="card-body">
-            <h5 class="card-title">Fabricantes</h5>
-            <table class="table table-bordered">
+            <table class="table table-hover table-borderless">
                 <thead>
                     <tr>
                         <th>
@@ -30,7 +32,7 @@
                 </thead>
                 <tbody>
                     <%try {
-                    for (Manufacturer c : Manufacturer.getList()) {%>
+                            for (Manufacturer c : Manufacturer.getList()) {%>
                     <tr>
                         <td>
                             <%=c.getId()%>
@@ -52,7 +54,7 @@
                         </td>
                     </tr>
                     <%}
-                } catch (Exception ex) {%>
+                    } catch (Exception ex) {%>
                 <div class="alert alert-danger" role="alert">
                     Erro ao exibir a lista de clientes
                 </div>  
