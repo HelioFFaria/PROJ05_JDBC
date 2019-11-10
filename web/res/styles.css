@@ -1,0 +1,153 @@
+/*
+    // Cor highlight: #ff0073
+// Cor botao: #EE1D7A
+// Cinza: #aaabb7
+*/
+
+
+/* Estilos Genéricos */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+p, span {
+    color: #3a3a40;
+    margin: 0;
+}
+
+h1,h2,h3,h4 {
+    color: #131529;
+    margin: 0;
+}
+
+nav {
+    margin-bottom: 60px;
+}
+
+#navbarNav {
+    flex-direction: row-reverse;    
+}
+
+
+/* Estilos Index */
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.description {
+    max-width: 50%; 
+    text-align: left;
+    padding-right: 40px;
+}
+.description .title {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.description .title h1 {
+    font-weight: 700;
+    font-size: 50px;    
+}
+
+.description .title h1:nth-child(2) {
+    color: #EE1D7A;
+}
+
+.menu {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu div {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: white; 
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.menu div:first-child {
+    margin-right: 20px;
+    background-color: #f08cb6;
+}
+
+.menu div:first-child:hover {
+    background-color: #d17b9d;
+}
+
+
+.menu div:last-child {
+    margin-left: 20px;
+    background-color: #6DF0AE;
+}
+
+.menu div:last-child:hover {
+    background-color: #5bcc92;
+}
+
+.image {
+    width: 100%;
+    max-width: 50%;
+}
+
+.image img {
+    width: 100%;
+}
+
+/* EQUIPE */
+
+.team {
+    background-color: #F2F2F2;
+    margin-top: 60px;
+}
+
+.team .title {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.team .title h1:last-child {
+    color: #EC3E71;
+    padding-left: 7px;
+}
+
+.team .cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team .cards .card {
+    background-color: white;
+    padding: 20px;
+    margin: 100px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.card .profile img {
+    width: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    border: 2px solid white;
+    transform: translateX(-50%);
+}
+
+.card .content h4 {
+    margin-top: 80px;
+}
