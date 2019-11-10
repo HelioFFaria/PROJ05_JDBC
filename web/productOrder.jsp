@@ -19,47 +19,48 @@
             <% productOrder Order = productOrder.getList().get(i);%>
             <h4><%= Order.getIdCliente()%></h4>
             <br/><br/> 
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            ID Cliente
+                        </th>
+                        <th>
+                            ID Ordem de Compra
+                        </th>
+                        <th>
+                            Data de Compra
+                        </th>
+                        <th>
+                            Quantidade
+                        </th>
+                        <th>
+                            ID Produto
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%=Order.getIdCliente()%>
+                        </td>
+                        <td>
+                            <%=Order.getIdOrdemCompra()%>
+                        </td>
+                        <td>
+                            <%=Order.getDataCompra()%>
+                        </td>
+                        <td>
+                            <%=Order.getQtdeOrdemCompra()%>
+                        </td>
+                        <td>
+                            <%=Order.getIdProduto()%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>
-                        ID Cliente
-                    </th>
-                    <th>
-                        ID Ordem de Compra
-                    </th>
-                    <th>
-                        Data de Compra
-                    </th>
-                    <th>
-                        Quantidade
-                    </th>
-                    <th>
-                        ID Produto
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <%=Order.getIdCliente()%>
-                    </td>
-                    <td>
-                        <%=Order.getIdOrdemCompra()%>
-                    </td>
-                    <td>
-                        <%=Order.getDataCompra()%>
-                    </td>
-                    <td>
-                        <%=Order.getQtdeOrdemCompra()%>
-                    </td>
-                    <td>
-                        <%=Order.getIdProduto()%>
-                    </td>
-                </tr>
-            </tbody>
-        </table>    
         <%} catch (Exception ex) {%>
         <div class="alert alert-danger" role="alert">
             Erro ao exibir a lista de compra do cliente
