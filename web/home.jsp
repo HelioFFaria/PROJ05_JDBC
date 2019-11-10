@@ -1,6 +1,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/jspf/header.jspf" %>
 
+<script>
+    
+    function goToPage(url) {
+       window.location.href = url;
+    }
+</script>
+
 
 <div class="container main">
     <div class="description">
@@ -10,10 +17,12 @@
             Fornecemos listas que fornecem uma ampla visão a respeito do fluxo de seus produtos
         </p>
         <div class="menu">
-            <div class="customer">
+            
+            <div class="customer" onclick="goToPage('<%=request.getContextPath()%>/customers.jsp')">
                 CLIENTES
             </div>
-            <div class="manufacturer">
+               
+            <div class="manufacturer" onclick="goToPage('<%=request.getContextPath()%>/manufacturers.jsp')">
                 FABRICANTES
             </div>
         </div>
