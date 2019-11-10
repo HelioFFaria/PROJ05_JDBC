@@ -171,17 +171,28 @@ nav {
 
 .customers {
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(229,144,168,0.8225665266106442) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(209,123,157,1) 100%);
 }
 
-.customers .container {
+.customers .container, .manufacturers .container {
     padding-bottom: 60px;
 }
+
+
 
 .btn-customer {
     background-color: #ea6e91;
 }
 
-.btn-customer .fa-eye {
+.btn-manufacturer {
+    background-color: #6DF0AE
+}
+
+.fa-eye {
     color: white;
+}
+
+.manufacturers {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(109,240,174,1) 100%);
 }
