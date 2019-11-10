@@ -27,13 +27,17 @@ h1,h2,h3,h4 {
 }
 
 nav {
-    margin-bottom: 60px;
+    /*    margin-bottom: 60px;*/
+    background-color: #FFF;
 }
 
 #navbarNav {
     flex-direction: row-reverse;    
 }
 
+.container-flex {
+    padding-top: 60px;
+}
 
 /* Estilos Index */
 
@@ -155,7 +159,7 @@ nav {
 /* Tables */
 
 .card.mt-5 {
-    margin-bottom: 60px;
+
     -webkit-box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.2);
     -moz-box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.2);
     box-shadow: 10px 10px 18px -4px rgba(0,0,0,0.2);
@@ -163,4 +167,21 @@ nav {
 
 .table th {
     border-top: none;
+}
+
+.customers {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(229,144,168,0.8225665266106442) 100%);
+}
+
+.customers .container {
+    padding-bottom: 60px;
+}
+
+.btn-customer {
+    background-color: #ea6e91;
+}
+
+.btn-customer .fa-eye {
+    color: white;
 }
