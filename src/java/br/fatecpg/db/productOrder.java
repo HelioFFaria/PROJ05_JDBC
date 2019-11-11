@@ -1,5 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
+/** To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -22,12 +21,7 @@ public class productOrder {
     private int qtdeOrdemCompra;
     private int idProduto;
 
-    /**
-     *
-     * @return
-     * @throws Exception
-     */
-    public static ArrayList<productOrder> getList() throws Exception{
+    public static ArrayList<productOrder> getList(int id) throws Exception{
         ArrayList<productOrder> list = new ArrayList();
         Class.forName("org.apache.derby.jdbc.ClientDriver");
         String url = "jdbc:derby://localhost:1527/sample";
@@ -36,9 +30,10 @@ public class productOrder {
         
         Connection con = DriverManager.getConnection(url, user, pass);
         Statement stmt = con.createStatement();
-        //Incluindo SELECT dos atributos CUSTOMER_ID, ORDER_NUM,SALES_DATE, QUANTITY e PRODUCT_ID da Entidade PURCHASE_ORDER,
+        //Incluindo SELECT dos atributos CUSTOMER_ID, ORDER_NUM,SALES_DATE, QUANTITY e PRODUCT_ID 
+        //da Entidade PURCHASE_ORDER fazendo WERE pelo ID do Cliente,
         //conforme solicitado no enunciado do projeto_05.
-        String sql = "SELECT CUSTOMER_ID, ORDER_NUM, SALES_DATE, QUANTITY, PRODUCT_ID FROM PURCHASE_ORDER";
+        String sql = "SELECT CUSTOMER_ID, ORDER_NUM, SALES_DATE, QUANTITY, PRODUCT_ID FROM PURCHASE_ORDER WHERE CUSTOMER_ID = "+ id;
         //...
         ResultSet rs = stmt.executeQuery(sql);
         
@@ -54,15 +49,7 @@ public class productOrder {
         return list;
     }
     
-    /**
-     *
-     * @param CUSTOMER_ID
-     * @param ORDER_NUM
-     * @param SALES_DATE
-     * @param QUANTITY
-     * @param PRODUCT_ID
-     */
-    public productOrder(int CUSTOMER_ID, int ORDER_NUM, String SALES_DATE, int QUANTITY, int PRODUCT_ID) {
+      public productOrder(int CUSTOMER_ID, int ORDER_NUM, String SALES_DATE, int QUANTITY, int PRODUCT_ID) {
         this.idCliente = CUSTOMER_ID;
         this.idOrdemCompra = ORDER_NUM;
         this.dataCompra = SALES_DATE;
@@ -70,82 +57,42 @@ public class productOrder {
         this.idProduto = PRODUCT_ID;
     }
        
-    /**
-     *
-     * @return
-     */
-    public int getIdCliente() {
+        public int getIdCliente() {
         return idCliente;
     }
 
-    /**
-     *
-     * @param idCliente
-     */
-    public void setIdCliente(int idCliente) {
+        public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
 
-    /**
-     *
-     * @return
-     */
-    public int getIdOrdemCompra() {
+        public int getIdOrdemCompra() {
         return idOrdemCompra;
     }
 
-    /**
-     *
-     * @param idOrdemCompra
-     */
-    public void setIdOrdemCompra(int idOrdemCompra) {
+        public void setIdOrdemCompra(int idOrdemCompra) {
         this.idOrdemCompra = idOrdemCompra;
     }
 
-    /**
-     *
-     * @return
-     */
-    public String getDataCompra() {
+        public String getDataCompra() {
         return dataCompra;
     }
-
-    /**
-     *
-     * @param dataCompra
-     */
+        
     public void setDataCompra(String dataCompra) {
         this.dataCompra = dataCompra;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getQtdeOrdemCompra() {
         return qtdeOrdemCompra;
     }
 
-    /**
-     *
-     * @param qtdeOrdemCompra
-     */
     public void setQtdeOrdemCompra(int qtdeOrdemCompra) {
         this.qtdeOrdemCompra = qtdeOrdemCompra;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getIdProduto() {
         return idProduto;
     }
 
-    /**
-     *
-     * @param idProduto
-     */
     public void setIdProduto(int idProduto) {
         this.idProduto = idProduto;
     }

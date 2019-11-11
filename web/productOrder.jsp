@@ -10,16 +10,12 @@
     <div class="card mt-5">
         <div class="card-body">
             <h5 class="card-title">Lista de Compras Cliente</h5>
-            <h3>Cliente ID</h3>
             <%if (request.getParameter("i") == null) { %>
             <div>É preciso informar o ID do Cliente</div>
             <% } else { %>
             <% try { %>
-            <% int i = Integer.parseInt(request.getParameter("i")); %>
-            <% productOrder Order = productOrder.getList().get(i);%>
-            <h4><%= Order.getIdCliente()%></h4>
-            <br/><br/> 
-
+            <% int id = Integer.parseInt(request.getParameter("i")); %>
+        
             <table class="table">
                 <thead>
                     <tr>
@@ -30,34 +26,36 @@
                             ID Ordem de Compra
                         </th>
                         <th>
-                            Data de Compra
+                            ID Produto
                         </th>
                         <th>
                             Quantidade
                         </th>
                         <th>
-                            ID Produto
+                            Data de Compra
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <%=Order.getIdCliente()%>
-                        </td>
-                        <td>
-                            <%=Order.getIdOrdemCompra()%>
-                        </td>
-                        <td>
-                            <%=Order.getDataCompra()%>
-                        </td>
-                        <td>
-                            <%=Order.getQtdeOrdemCompra()%>
-                        </td>
-                        <td>
-                            <%=Order.getIdProduto()%>
-                        </td>
-                    </tr>
+                    <% for( productOrder Order : productOrder.getList(id)){%>
+                        <tr>
+                            <td>
+                                <%=Order.getIdCliente()%>
+                            </td>
+                            <td>
+                                <%=Order.getIdOrdemCompra()%>
+                            </td>
+                            <td>
+                                <%=Order.getIdProduto()%>
+                            </td>
+                            <td>
+                                <%=Order.getQtdeOrdemCompra()%>
+                            </td>
+                            <td>
+                                <%=Order.getDataCompra()%>
+                             </td>
+                        </tr>
+                   <%}%>
                 </tbody>
             </table>
         </div>
