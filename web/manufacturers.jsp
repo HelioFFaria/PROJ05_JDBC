@@ -50,7 +50,7 @@
                                 <%=c.getEmail()%>
                             </td>
                             <td class="text-center">
-                                <a href="#" class="btn btn-manufacturer"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                <a href="produtos.jsp?i=<%=c.getId()%>" class="btn btn-manufacturer"><i class="fa fa-eye" aria-hidden="true"></i></a>
                             </td>
                         </tr>
                         <%}
