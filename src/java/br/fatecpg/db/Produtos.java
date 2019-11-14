@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class Produtos {
     private int idFabricante;
     private int idProduto;
-    private int descricaoProduto;
+    private String descricaoProduto;
     private int qtdeEstoque;
     
      public static ArrayList<Produtos> getList(int id) throws Exception{
@@ -40,14 +40,14 @@ public class Produtos {
         while(rs.next()) {
             //Instanciando Produto a, adicionando MANUFACTURER_ID,PRODUCT_ID, DESCRIPTION, QUANTITY_ON_HAND,
             //da Entidade PRODUCT, conforme solicitado no enunciado do projeto_05.  
-            Produtos c = new Produtos(rs.getInt("MANUFACTURER_ID"), rs.getInt("PRODUCT_ID"), rs.getInt("DESCRIPTION"), rs.getInt("QUANTITY_ON_HAND"));
+            Produtos c = new Produtos(rs.getInt("MANUFACTURER_ID"), rs.getInt("PRODUCT_ID"), rs.getString("DESCRIPTION"), rs.getInt("QUANTITY_ON_HAND"));
             //...
             list.add(c);
         }
         return list;
     }
 
-    public Produtos(int MANUFACTURER_ID, int PRODUCT_ID, int DESCRIPTION, int QUANTITY_ON_HAND) {
+    public Produtos(int MANUFACTURER_ID, int PRODUCT_ID, String DESCRIPTION, int QUANTITY_ON_HAND) {
         this.idFabricante = MANUFACTURER_ID;
         this.idProduto = PRODUCT_ID;
         this.descricaoProduto = DESCRIPTION;
@@ -70,11 +70,11 @@ public class Produtos {
         this.idProduto = idProduto;
     }
 
-    public int getDescricaoProduto() {
+    public String getDescricaoProduto() {
         return descricaoProduto;
     }
 
-    public void setDescricaoProduto(int descricaoProduto) {
+    public void setDescricaoProduto(String descricaoProduto) {
         this.descricaoProduto = descricaoProduto;
     }
 
